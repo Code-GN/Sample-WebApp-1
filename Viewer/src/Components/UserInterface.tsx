@@ -7,6 +7,7 @@
 
 import React from "react";
 import Application from "#/Models/Application";
+import './user-interface.scss';
 
 type Props = {
   app: Application;
@@ -26,7 +27,27 @@ export default class UserInterface extends React.Component<Props, State> {
 
   render() {
     return (
-      <div>Hello world!</div>
+      <div id="ui">
+
+        <header>
+          <section className="left">
+            <h1>WebApps</h1>
+          </section>
+          <section className="right">
+            <span className="user-name">No User</span>
+          </section>
+        </header>
+
+        <main>
+          <nav id="global-navi"></nav>
+          <div id="content"></div>
+        </main>
+
+        <footer>
+          <span id="copyright">(c) Code-GN all rights receieved.</span>
+        </footer>
+
+      </div>
     );
   }
 }
